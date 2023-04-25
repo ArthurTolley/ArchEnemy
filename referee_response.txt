@@ -1,0 +1,102 @@
+Reviewer 1:
+-----------
+
+General comments:
+
+Overall this is a well-formulated, and well-presented research project.  It is very rare to see the noise mitigation or ``detchar'' community produce a physically motivated, mathematically sound, noise reduction technique *and* test its effectiveness on an actual astrophysical search pipeline.  One of those is always missing, usually the last one, the one that's most important.  I recommend this paper for publication, after the corrections below are made.
+
+I would like to see all of the problems identified below corrected, but the most serious are (i) the repeated claims that glitches are ``non-Gaussian'', made here without supporting evidence, and (ii) the lack of a statement of the statistical significance of the final result, namely that glitch removal improves sensitivity.  Fixing both issues should be straight-forward.  Note that even in the event that upon analyzing their results they find their conclusion is not statistically significant, but I would *still* recommend publication, since even that observation should be documented.
+
+
+Specific comments:
+
+1. References.  I thank the authors for providing preprint information for all papers.  it is time consuming for them, but it makes finding the documents much easier, especially when away from campus.  however, the information provided is simply the arxiv document number which is incomplete.  I recognize them to be arxiv document numbers, so I didn't have any problems, but they could easily have been codes in some other database.  for example reference [1] is said to be simply "Preprint 1411.4547", with no database or location specified.  this is found at https://arxiv.org/abs/1411.4547 which states to cite it as "arXiv:1411.4547 [gr-qc]".  I recommend the authors follow the citation instructions provided by arxiv.
+
+
+2. Abtract, "... we demonstrate an increase in the sensitive volume of the gravitational wave search for binary black hole signals ..." --> "... we demonstrate an increase in the sensitive volume of a gravitational wave search for binary black hole signals ...".  Note:  the 6 day analysis described here is not any of "the" published searches for gravitational waves from binary black holes, it is merely intended to be a representative example of such a thing.
+
+
+3. Introduction, page 2, line 16.  as explained in reference [3] the first detection of gravitational waves was accomplished by the coherent waveburst pipeline.  this search pipeline is not included in the list of four example search pipelines that are cited.  since the discovery in reference [3] is specifically called out in this manuscript, I recommend adding a suitable reference for the search pipeline that achieved it.  I'm not familiar with which to recommend, perhaps there is information in the documentation, which a search engine led me to find at https://www.atlas.aei.uni-hannover.de/work/salemi/waveburst/doc/cwb/man/index.html.
+
+
+4. Introduction, page 2, line 20.  the authors make the assertion that glitches are non-Gaussian.  has this been established?  clearly glitches are not the result of a stationary Gaussian process because their amplitudes are too great a departure from the mean, however has it been established that they are the result of a process that is *both* non-stationary *and* non-Gaussian?  said another way, has it been shown that a non-stationary, but still Gaussian, process cannot be constructed that adequately models glitch features in GW strain data?  references [13], [14], and [15] do not appear to support the claim of non-Gaussianity, but I have not read every sentence with care (it's nearly 200 pages of text, altogether, and the authors of this manuscript have not directed the reader to the appropriate location).  here's what my reading of those references found:
+
+	- reference [13] on page 40 states "Over long stretches of LIGO-Virgo data, the noise is known to be non-stationary and non-Gaussian." but that claim is made without supporting documentation and without a supporting reference.  that text directs the reader to section 5 for supporting documentation, but section 5 is very careful never to claim the noise is non-Gaussian, only that it is non-stationary.  that claim of non-Gaussianity in reference [13] appears to be a fabrication, and cannot be used as supporting documentation for that same claim in this manuscript (perhaps that paper's referees were not as diligent as I am being).
+
+	- reference [14] never makes the claim that the noise is non-Gaussian.  it does claim that a software system known as "iDQ" was used to search for and identify periods of time that are non-Gaussian, and that claim of non-Gaussianity is even in the title of the supporting reference for iDQ (https://iopscience.iop.org/article/10.1088/2632-2153/abab5f).  however, again, nowhere in that document is that claim justified other than to also cite this manuscript's reference [13], which as I have explained does not support that claim.  the authors of the iDQ paper appear to not be using the expression ``non-Gaussian'' as a well defined mathematical property of a stochastic process, but merely as a colloquial synonym for the generic term ``glitch'', perhaps because it makes it sound more science-y.  for example, just above their equation (5) they talk about formulating a "probability that Gaussian noise alone could have produced h", where what they mean to have said is "probability that stationary Gaussian noise alone could have produced h".  note above in their equation (1) where they have specified that n(t) is a *stationary* Gaussian noise process, a property that has been dropped from the analysis between there and equation (5) without explanation.  as I said, they appear to be using the expressions ``Gaussian'' and ``non-Gaussian'' as a synonyms for the generic terms ``non-glitch'' and ``glitch'', respectively, and are ignoring the mathematical meaning of the words.  in any case, there is nothing presented in that paper that establishes glitches to be non-Gaussian.
+
+	- finally reference [15] does not contain any claim of non-Gaussianity.  like (most of) [13] it is careful only ever to differentiate between that which is both stationary and Gaussian, together, and that which is not, without saying which property, specifically, is not met.
+
+without supporting documentation, the authors of this manuscript must reword this document to not make the claim that glitches are non-Gaussian.  the claim, specifically, should be that glitches are the result of a process that is not a stationary Gaussian process.
+
+
+5. Introduction, page 2 line 42, and page 3 line 43.  the authors have repeatedly used (what I feel to be) the awkward phrase "surfaces in which scattered-light glitches originate from".  I'm pretty sure this is wrong, I think you can't both "in" and "from" something with only a single verb.  you have to pick one, like, "surfaces from which scattered-light glitches originate".
+
+
+6. Section 2, page 7, line 23, the total amplitude when the main beam and scattered light beam combine is said to be "Atot = A0 + Asc", but that is not true.  that can only be true for special values of the phase between them, which from equation (2) is not required to be 0.  I think this would be more clear if the amplitudes and phases were not separated, but instead if the amplitudes were treated as complex numbers.  for example if (1) was written
+
+	A_sc = A_0 T \sqrt{2F / pi} \sqrt{f_sc} exp(i phi_sc)
+
+with phi_sc defined as in (2), then it would be true that A_tot = A_0 + A_sc, as written.  please either correct the statements or change the mathematical definitions of the quantities so the statements are correct.
+
+
+7. Section 2, page 7, line 26, the logic is backwards here.  the claim is the strain is proportional to the scattered light phase, and therefore we write equation (3).  but equation (3) is not a proportionality relationship.  for small changes in phase, sin(phi0 + delta phi) \approx cos(phi0)*sin(delta phi) which *is* a proportionality relationship between strain and phase, but you get to that conclusion from equation (3), not the other way around.  Please reword.
+
+
+8. Section 2, page 8, line 51, "approachec" --> "approaches"
+
+
+9. Section 3, page 12, line 42, the claim "The matched filter is the optimal method for detecting known waveforms in the data, when the data is stationary and Gaussian" is incomplete, and for the purposes of this paper, it is false.  This false claim is widely repeated in the GW literature, and it needs to stop.  The matched filter inner product is the optimal detection statistic *in the Neyman-Pearson sense* when searching for *a single known waveform* at *a single known time* in stationary Gaussian noise.  when searching for any member of a family of waveforms --- as is being done here --- it is *not* the optimal detection statistic.  it is, nevertheless, widely used because it has such a low computational cost, and because it's hoped to be probably good enough given that in the other special case it is, in fact, optimal, but that's not the same as being actually optimal.  perhaps one can argue it's "optimal" in the "what I can be bothered doing because it's probably good enough" sense, but that's not what people will assume this claim means, and it's not what the authors intend them to infer when making the claim.  the statistic known to extremize the detection efficiency at fixed false-alarm rate (the Neyman-Pearson criterion) is the likelihood ratio
+
+P(data | signal) / P(data | noise)
+
+for a single known waveform at a single known time in stationary Gaussian noise it can be shown that this ratio is monotonic in the matched filter SNR defined as the normalized noise-weighted inner product in the manuscript's equation (18), and therefore thresholding on SNR in that case is as good as thresholding on the likelihood ratio --- it's optimal.  if the waveform is not known, but it's still known that only one member of the family is present at a time, then P(data | signal) becomes
+
+P(data | signal) = \int_{waveform family} P(data | specific waveform) d waveform
+
+i.e., you need to marginalize the numerator of the likelihood ratio over choice of waveform.  the assumption that the matched filter SNR maximized over a template bank is still probably good enough is equivalent to assuming that P(data | specific waveform) is a strongly peaked function at the correct waveform, and so the marginalization integral can be approximated up to an unknown (and irrelevant) normalization factor by the value of the integrand at its peak.  it's not optimal, it's an approximation of what would be, and it's probably not even a good approximation for low amplitude signals, but it leads to an algorithm that has a low computational cost, and that ends up winning the argument.
+
+
+10. Section 3.2, page 12, line 8, what is "search" referring to here?  this paragraph is describing the construction of a template bank via a stochastic algorithm that searches for and fills holes in a template bank.  *that* search is not linear in the number of templates.  that algorithm is probably cubic or worse in the final number of templates.  if what is meant is the search for glitches using the template bank is linear in the size of the bank, then please reword this to make that more clear.
+
+
+11. section 3.2, page 12, line 24.  a match of 1.0 indicates *parallel* waveforms, not identical waveforms.  equation (22) defines match in terms of normalized versions of the waveforms, so the match does not imply anything about the magnitude of either of the waveforms (a and b can be scalled up or down without changing the match between them).
+
+
+12. Figure 4.  if I zoom in enough, I can see that it's a scatter plot of black dots on a white background, but viewing from normal page reading distance I can't tell if it's that or white dots on a black background.  please explain which it is in the caption.
+
+
+13. Section 3.4, page 14, equation (23) seems to not be a \chi^2 distributed R.V.  the (2n - 2) factor in the denominator appears to be the # of degrees of freedom, so this looks like (\chi^2 / DOF), i.e. a R.V. whose expectation value in noise is 1.  my understanding of what this is is reinforced by the form of equation (24), where clearly 1 is a special value.  that's a sensible quantity to compute, but it's not a \chi^2 distributed R.V.  the expectation value of a \chi^2 distributed random variable is equal to the number of degrees of freedom.  see https://en.wikipedia.org/wiki/Chi-squared_distribution.  maybe changing the variable to \bar{\chi}^{2} and changing (23) to
+
+\bar{chi}^{2} = \frac{\chi^{2}}{\text{DOF}} = \frac{n}{2 n - 2} ...
+
+but leaving all the rest of the text unchanged is fine.  it's clearly some kind of \chi^2 statistic, that's not false, so calling it that isn't wrong.  what I mean is one only needs to change the symbol when used in mathematics, as the quantity from equation (23), one doesn't need to change the symbol in the text when talking about a \chi^2 statistic.
+
+
+14. Also, here again in several places the authors are describing glitches as "non-Gaussianity".  the observation that the residuals are not consistent with the properties of the surrounding stationary Gaussian noise does not mean the glitch is the result of a non-Gaussian process, only that it's not the result of the same stationary Gaussian process that produced that other noise component.
+
+
+15. Figure 7, caption, page 18 line 48 "... is clustered is time to identify ..." --> "... is clustered in time to identify ..."
+
+
+16. Section 4.1, Table 2, page 26.  we need to know what change in recovered injection count we should expect just from random chance.  we need to know if these changes in sensivity are statistically significant or not.  for example, the actual number recovered is a binomial-distributed random variable.  I can't do the analysis properly with the information available, you will have the information needed to do this properly, I can only guess, but here's how to proceed.  6200 injections were placed in the data, some of which will be found, at random, to meet the criterion "missed or found when glitches are present, but found or missed (the opposite) when glitches are removed".  which injections meet this criterion are uniformly distributed among the injections, and whether any individual injection meets this criterion is independent of which other injections have or haven't met it.  therefore, the number of injections for which the "found/missed" answer changes when the glitches are moved is, like the count of recovered injections itself, also a binomial-distributed random variable.  the maximum likely estimate for the probability that an injection meets this criterion is the actual observed rate at which it happens.  I don't know how many injections changed their answer, I can only see from table 2 that the net change is +7.  that's the difference between the number of additional found and the number of additional missed injections, not the total that change state.  but using that number, the estimate for the probability an injection is affected by the glitch removal is p = 7/6200 = 0.113%.  the variance in the number that meet the criterion is n * p * (1-p) = 6.99, so there +7 observed increase in recovered injections has a 38% uncertainty.  The claim that the sensitivity has gone up at all is something like a 3 sigma result.
+
+however!!  as I said, that number is incorrect because it's using only the net change as the count.  you need to look to see what total number of injections changed their state, and re-do the analysis above using that number.  the 38% I obtained above is a lower bound on the uncertainty, so "3 sigma" is an upper bound on the confidence.  the correct answer is worse than this.
+
+-----------
+Reviewer 2:
+-----------
+
+COMMENTS TO THE AUTHOR(S)
+The authors develop a chi-square discriminator for the scattered-light glitches in LIGO detectors and use it to test the improvement in performance of searches of compact binary coalescence signals. For this purpose they simulate those signals for varying source distances and compare the sensitivity volumes with and without the use of their method. They report observing very modest improvements and briefly discuss possible ways in which this method may be improved in the future. Scattered-light glitches are known to be a significant source of false-alarms in binary searches and have resulted in retractions of alerts.
+For that reason, this work targets a worthy problem, which is expected to grow in its impact in the upcoming fourth observation run.
+I recommend the work for publication provided the concerns below are addressed satisfactorily.
+
+1. There is potential for ambiguity in the use of $\rho$ in equations (22) and (23). Is it true that the \rho in both equations is computed using the scattered-light template? If so, it would help to emphasize this aspect below (23), especially, because you cite a binary paper to motivate the construction of the reweighted SNR.
+2. In Sec. 3.5, how was the choice of 0.9s for the clustering window made? Ditto for the glitch frequency window size of 4Hz.
+3. Figure 6: Lowering the reweighted-SNR threshold from 8 would identify more scattered-light glitches, but would also misidentify some of the binary signals as glitches based on only the chi^2 and SNR values shown here. However, this reweighted-SNR is not the only discriminator available to the binary signals, some of which may well separate from these glitches by way of other chi^2 test. I presume those tests do not benefit these injections. If so, this point should be clarified here.
+4. In Sec. 4.1, the authors should provide more information on the 12 injections missed by the glitch-subtracted search that were otherwise found successfully by the original search. Particularly, how many of these had any degree of overlap with the scattered-light glitches?
+5. Similarly, what is the primary reason that the glitch-subtracted search identified 10 additional binary signals? Two of these are displayed in Fig. 12, which helps. How many more of these signals were overlapping with such glitches? Also, did the glitch-subtraction aid their detection because the traditional chi-square values on those binary signals improved after the glitch subtraction?
+
+Minor typos; p8, line 51 approaches p12, line 49: than Fig. 7, line 48: is clustered in time
+
