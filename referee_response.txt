@@ -55,7 +55,28 @@ without supporting documentation, the authors of this manuscript must reword thi
 14. Also, here again in several places the authors are describing glitches as "non-Gaussianity".  the observation that the residuals are not consistent with the properties of the surrounding stationary Gaussian noise does not mean the glitch is the result of a non-Gaussian process, only that it's not the result of the same stationary Gaussian process that produced that other noise component.
 
 Change:
-TO BE WRITTEN
+We have avoided referring to glitches as non-Gaussianities:
+
+Introduction:
+"the data contains both non-stationary noise and non-Gaussian transient noise `glitches'."
+to:
+"the data contains both non-stationary noise and short duration `glitches' where noise power increases rapidly."
+
+Section 3.4:
+"This test is constructed so as to produce large values when the data contains a non-Gaussianity that is not well described by the template, but to follow a $\chi^2$ distribution if a non-Gaussianity that matches well to the template is present, or if no non-Gaussianity is present in the data."
+to:
+"This test is constructed so as to produce large values when the data contains short duration burst of power that is not well described by the template, but to follow a $\chi^2$ distribution if a glitch that matches well to the template is present, or if no burst of power is present in the data."
+
+Section 3.4, next paragraph:
+"Any non-Gaussianity that does not exhibit symmetric morphology should not fit with this deconstruction of the template, and should result in elevated $\chi_{r}^{2}$ values."
+to:
+"Any glitch that does not exhibit symmetric morphology should not fit with this deconstruction of the template, and should result in elevated $\chi_{r}^{2}$ values."
+
+Section 5:
+"such techniques offer a method for mitigating the effect that these non-Gaussianities will have on the search, maximizing the number of observations that can be made."
+to:
+"such techniques offer a method for mitigating the effect that these glitches will have on the search, maximizing the number of observations that can be made."
+
 -----
 
 #####
