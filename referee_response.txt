@@ -1,4 +1,4 @@
-We thank the reviewers for their much appreciated time and feedback when reading and reviewing our submitted paper. This document forms the response we have made to the questions and isssues raised, we address each comment separately and the changes made to the paper in response to the comments are explicitly highlighted with quotation marks "". 
+We thank the reviewers for their time and feedback when reading and reviewing our manuscript. The comments have been very useful in improving the manuscript. This document describes the changes we have made in response to the questions and isssues raised. We address each comment separately and the changes that we have made to the paper in response to the comments are explicitly highlighted with quotation marks "". 
 
 Reviewer 1:
 -----------
@@ -25,7 +25,7 @@ The relevant preprint references have been updated to the correct 'cite as:' inf
 2. Abtract, "... we demonstrate an increase in the sensitive volume of the gravitational wave search for binary black hole signals ..." --> "... we demonstrate an increase in the sensitive volume of a gravitational wave search for binary black hole signals ...".  Note:  the 6 day analysis described here is not any of "the" published searches for gravitational waves from binary black holes, it is merely intended to be a representative example of such a thing.
 
 Change:
-We agree that the GW search we have performed is representative of a typical GW search and not an replication of a previously performed GW search, the text has been changed from "the" to "a" GW search.
+We agree, the text has been changed from "the" to "a" GW search.
 -----
 
 #####
@@ -65,12 +65,12 @@ to:
 Section 3.4:
 "This test is constructed so as to produce large values when the data contains a non-Gaussianity that is not well described by the template, but to follow a $\chi^2$ distribution if a non-Gaussianity that matches well to the template is present, or if no non-Gaussianity is present in the data."
 to:
-"This test is constructed so as to produce large values when the data contains short duration burst of power that is not well described by the template, but to follow a $\chi^2$ distribution if a glitch that matches well to the template is present, or if no burst of power is present in the data."
+"This test is constructed so as to produce large values when the data contains a glitch, or astrophysical signal, that is not well described by the template, but to follow a $\chi^2$ distribution if a glitch that matches well to the template is present, or if the data is Gaussian and stationary."
 
 Section 3.4, next paragraph:
 "Any non-Gaussianity that does not exhibit symmetric morphology should not fit with this deconstruction of the template, and should result in elevated $\chi_{r}^{2}$ values."
 to:
-"Any glitch that does not exhibit symmetric morphology should not fit with this deconstruction of the template, and should result in elevated $\chi_{r}^{2}$ values."
+"Any glitch, or astrophysical signal, that does not exhibit symmetric morphology should not fit with this deconstruction of the template, and should result in elevated $\chi_{r}^{2}$ values."
 
 Section 5:
 "such techniques offer a method for mitigating the effect that these non-Gaussianities will have on the search, maximizing the number of observations that can be made."
@@ -85,7 +85,7 @@ to:
 5. Introduction, page 2 line 42, and page 3 line 43.  the authors have repeatedly used (what I feel to be) the awkward phrase "surfaces in which scattered-light glitches originate from".  I'm pretty sure this is wrong, I think you can't both "in" and "from" something with only a single verb.  you have to pick one, like, "surfaces from which scattered-light glitches originate".
 
 Change:
-We acknowledge that the original wording "surfaces in which scattered-light glitches originate from" was presented awkwardly, and therefore, we have revised the phrase to "surfaces from which scattered-light glitches originate," as suggested.
+We have revised the phrase to "surfaces from which scattered-light glitches originate," as suggested.
 -----
 
 #####
