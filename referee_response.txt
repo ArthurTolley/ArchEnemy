@@ -115,7 +115,7 @@ to
 7. Section 2, page 7, line 26, the logic is backwards here.  the claim is the strain is proportional to the scattered light phase, and therefore we write equation (3).  but equation (3) is not a proportionality relationship.  for small changes in phase, sin(phi0 + delta phi) \approx cos(phi0)*sin(delta phi) which *is* a proportionality relationship between strain and phase, but you get to that conclusion from equation (3), not the other way around.  Please reword.
 
 Change:
-We have reworded the statement regarding the proportionality relationship between the strain and scattered-light phase. The text previously read "The measured \gw{} strain is proportional to the phase noise and so the noise introduced by \scl{}, h_{sc}, can be expressed as" and now reads "The noise introduced by the \scl{}, h_{sc}, can be approximated through the relationship sin(phi0 + delta phi) \approx cos(phi0) * sin(delta phi) for small delta phi, and can be expressed as".
+We have reworded the statement regarding the proportionality relationship between the strain and scattered-light phase. The text previously read "The measured gravitational wave strain is proportional to the phase noise and so the noise introduced by scattered-light, h_{sc}, can be expressed as" and now reads "The noise introduced by the scattered-light, h_{sc}, can be approximated through the relationship sin(phi0 + delta phi) \approx cos(phi0) * sin(delta phi) for small delta phi, and can be expressed as".
 -----
 
 #####
@@ -138,7 +138,7 @@ We agree with the reviewer that the initial statement that the matched filter is
 
 with the following paragraph:
 
-"To identify glitches with these values of the parameterization, we follow precedent set by the \gw{} search and apply matched filtering. While the likelihood ratio, which takes into account the probability of the data given the signal and noise, is the optimal detection statistic, we assume the matched filter is a good approximation to the likelihood ratio and is a low cost method of searching with a family of waveforms. The matched filter is defined as~\cite{findchirp}. "
+"To identify glitches with these values of the parameterization, we follow precedent set by the gravitational wave search and apply matched filtering. While the likelihood ratio, which takes into account the probability of the data given the signal and noise, is the optimal detection statistic, we assume the matched filter is a good approximation to the likelihood ratio and is a low cost method of searching with a family of waveforms. The matched filter is defined as~\cite{findchirp}. "
 
 -----
 
@@ -148,7 +148,9 @@ with the following paragraph:
 10. Section 3.2, page 12, line 8, what is "search" referring to here?  this paragraph is describing the construction of a template bank via a stochastic algorithm that searches for and fills holes in a template bank.  *that* search is not linear in the number of templates.  that algorithm is probably cubic or worse in the final number of templates.  if what is meant is the search for glitches using the template bank is linear in the size of the bank, then please reword this to make that more clear.
 
 Change:
-To ensure the statement is more clear we have included explicit reference to search for scattered-light glitches with matched filtering, the statement previously read "The dominant cost of the search is matched filtering and is approximately linear to the number of templates" and has been changed to "The dominant cost of the search for \scl{} glitches is matched filtering and is approximately linear in the number of templates".
+To ensure the statement is more clear we have included explicit reference to search for scattered-light glitches with matched filtering, the statement previously read "The dominant cost of the search is matched filtering and is approximately linear to the number of templates" and has been changed to "The dominant cost of the search for scattered-light glitches is matched filtering and is approximately linear in the number of templates".
+At the end of the same paragraph we have included more information on how the costly the template bank generation is in the entire search process. 
+"The template bank generation alone does not constitute a significant computational cost in the search."
 -----
 
 #####
@@ -157,7 +159,7 @@ To ensure the statement is more clear we have included explicit reference to sea
 11. section 3.2, page 12, line 24.  a match of 1.0 indicates *parallel* waveforms, not identical waveforms.  equation (22) defines match in terms of normalized versions of the waveforms, so the match does not imply anything about the magnitude of either of the waveforms (a and b can be scalled up or down without changing the match between them).
 
 Change:
-We have included a footnote on page 12 stating the following "A match of 1.0 is only possible for normalized waveforms up to a constant scaling factor." to inform readers about the requirement of normalized waveforms to calculate a match of 1.0.
+We have included a footnote on page 12 stating the following "A match of 1.0 is only possible for normalized waveforms." to inform readers about the requirement of normalized waveforms to calculate a match of 1.0.
 -----
 
 #####
@@ -195,12 +197,12 @@ Change:
 We thank the reviewer for the effort they have made to highlight the statistical significance of our result and have provided the analysis they wish to see. The paper now contains the information concerning the number of injections that have changed state, either newly missed or newly found, these are displayed clearly in table 3, page 27, section 4.1. With this information we have repeated the analysis made by the reviewer in their comment, the calculation has been included in Appendix B and the results of which - that the results we have found aren't statistically significant - have been included in section 4.1 alongside our opinion that the sensitivity gain isn't good enough to justify the use of time and resources on improving the significance of the results.
 
 The sentence added into section 5:
-"The statistical significance of the increase in sensitivity found for the binary black hole injection set has been evaluated in~\ref{sec:apdx_stat_sig} and is determined to be statistically insignificant, however, the resources and time required to increase the significance of these results isn't feasible. "
+"The sensitivity increase we report for the binary black hole injection set is not statistically significant at a 95\% confidence interval, the analysis is included in~\ref{sec:apdx_stat_sig}. Repeating the scattered-light glitch search and glitch subtracted gravitational wave search on a larger injection set would increase our confidence in our results, however, the marginal sensitivity increase would not justify this."
 
 The statistical significance appendix calculation:
-"We can calculate the statistical significance of our results for all 3 injection sets however, we only report sensitivity increases for the binary black hole injection set so we only perform the calculation for that injection set. For binary black hole injections there were $6200$ injected signals, $10$ additional injections were found in the glitch subtracted \gw{} search, $3$ additional injections were missed in our search, this gives us $13$ injections which have changed state. We calculate the probability that an injection has been affected by the glitch removal, $p = 13/6200 = 0.21\%$, we calculate the variance, $\textrm{variance} = n * p * (1 - p) = 12.97$, we take the square root to find the standard deviation, $\textrm{standard deviation} = \sqrt{12.97} = 3.60$, then we can divide the number of positively changed injections and divide by the standard deviation to calculate the number of standard deviations away from the mean we are, $\textrm{standard deviations} = (10 - 3)/\textrm{standard deviation} = 1.94$. A significance level of 5\% has a critical value of $1.96$, therefore our result is not statistically significant as our results is less than the 95\% confidence interval."
+"We report a marginal sensitivity increase for the binary black hole injection set in section~\ref{sec:results}, and in this appendix we compute the statistical significance of this finding.
 
-
+The binary black hole injection set contains $6200$ injected signals, $10$ additional injections were found in the glitch subtracted gravitational wave search, $3$ additional injections were missed in our search, this gives us $13$ injections which have changed state. We calculate the probability that an injection has been affected by the glitch removal, p = \frac{13}{6200} = 0.21\%, then we calculate the standard deviation, \textrm{std} = \sqrt{n * p * (1 - p)} = 3.60, divide the number of positively changed injections by the standard deviation to calculate the number of standard deviations away from the mean we are, \textrm{standard deviations} = \frac{(10 - 3)}{3.60} = 1.94. A significance level of 5\% has a critical value of $1.96$, therefore our result is not statistically significant as our result is less than the 95\% confidence interval."
 -----
 
 -----------
@@ -217,7 +219,7 @@ Note: In the current version these are equations (23) & (24)
 1. There is potential for ambiguity in the use of $\rho$ in equations (22) and (23). Is it true that the \rho in both equations is computed using the scattered-light template? If so, it would help to emphasize this aspect below (23), especially, because you cite a binary paper to motivate the construction of the reweighted SNR.
 
 Change:
-We agree that there is a potential for confusion, so the statement "where rho_{rw} represents the re-weighted signal-to-noise ratio of the \scl{} glitch template calculated using the signal-to-noise ratio, rho, and the chi^2 value of that template." has been included after equation (24) to explicitly define the variables.
+We agree that there is a potential for confusion, so the statement "where rho_{rw} represents the re-weighted signal-to-noise ratio of the scattered-light glitch template calculated using the signal-to-noise ratio, rho, and the chi^2 value of that template." has been included after equation (24) to explicitly define the variables.
 -----
 
 #####
@@ -238,7 +240,7 @@ We have updated both statements to include more information on how they were cho
 
 Change:
 The reviewer is correct that discriminators made available to gravitational wave signals would not be applicable here due to the scattered-light subtraction happening prior to running any gravitational wave searches. The subtraction will interfere with the gravitational wave signal power before any discriminator can be applied to prevent the subtraction from occurring. This is a potential future development for this project. We have included this reasoning in the discussion on page 31:
-"Further integration with the \gw{} search and \gw{} discriminators could provide a technique for selectively subtracting \scl{} glitches where there is an increased possibility for a \scl{} glitch to have been misidentified on a \gw{} signal."
+"Selectively subtracting glitches based on the presence of a gravitational wave signal is possible by moving the glitch subtraction process inside of the gravitational wave searches and including the results of other gravitational wave discriminators to determine the legitimacy of an ArchEnemy identified glitch."
 -----
 
 #####
@@ -248,7 +250,7 @@ The reviewer is correct that discriminators made available to gravitational wave
 
 Change:
 We agree that this is useful information to provide. We have included the requested extra information in the final paragraph on page 27. The added text is as follows:
-"Small changes in the PSD caused by removing noise can cause marginal injections to be missed, we can also look for \scl{} glitches found nearby the other newly-missed injections: one of the three newly-missed binary black hole injections had a glitch removed approximately $9$ seconds after the injection; one of the five binary neutron star injections had $10$ glitches removed from $28$ - $16$ seconds prior to the injection; one of the four neutron star black hole injections had glitches removed $52$ and $14$ seconds prior to the injection. The other newly-missed injections showed no \scl{} glitches within a $20$ second window for binary black hole injections and a $60$ second window for binary neutron star and neutron star black hole injections."
+"It is informative to explore injections found by previously that were not found by our new analysis. One of the three newly-missed binary black hole injections had a glitch removed approximately $9$ seconds after the injection; one of the five binary neutron star injections had $10$ glitches removed from $28$ - $16$ seconds prior to the injection; one of the four neutron star black hole injections had glitches removed $52$ and $14$ seconds prior to the injection. The other newly-missed injections showed no \scl{} glitches within a $20$ second window for binary black hole injections and a $60$ second window for binary neutron star and neutron star black hole injections."
 -----
 
 #####
@@ -258,9 +260,10 @@ We agree that this is useful information to provide. We have included the reques
 
 Change:
 With regards to the similar analysis of the previous point, this sentence was included on page 28.
-"When looking for \scl{} glitches nearby to these newly-found injection we find 5 of the 10 binary black hole injections have \scl{} glitches within a 20 second window of the injection, 3 of 5 binary neutron star injections have \scl{} glitches within a 60 second window of the injection and, 7 of the 10 neutron star black hole injections had \scl{} glitches within a 60 second window of the injection."
+"We find $5$ of the $10$ binary black hole injections have \scl{} glitches within a $20$ second window of the injection, $3$ of $5$ binary neutron star injections have \scl{} glitches within a $60$ second window of the injection and, $7$ of the $10$ neutron star black hole injections had \scl{} glitches within a $60$ second window of the injection. The false alarm rates of the newly found and newly missed injections can be seen in~\ref{sec:apdx_FAR_table}."
  
-The injections that were missed in the original gravitational wave search had no recorded chi-square values and therefore cannot be compared to the chi-square values when they were found in the glitch subtracted search. This makes it impossible to compare whether the newly found injections were discovered due to an improved chi-square value. We have mentioned within section 4.1 that the majority of the injections which changed state (newly found or newly missed) are marginal detections close to the false alarm rate threshold, therefore a small change in the PSD can cause a change in the false alarm rate for better or worse. To aid readers we have included a new table for the newly found and newly missed injections, along with their false alarm rate, in a newly added appendix.
+### TO DO:
+- Look at the snr and chi squared values and see the difference - where available
 
 -----
 Note: We have collected all the comments regarding spelling and grammatical errors.
@@ -272,3 +275,9 @@ Minor typos; p8, line 51 approaches p12, line 49: than Fig. 7, line 48: is clust
 Change:
 We would like to thank the reviewers for their care when reading the paper and identifying these errors, these have now been corrected.
 -----
+
+-----
+New Contents:
+
+New reference:
+Page 2, Paragraph 2: "Glitches are caused by instrument behaviour or interactionjs between the instrument and the environment [17, 18] - 18: arXiv:2304.07477 [astro-ph.IM]
