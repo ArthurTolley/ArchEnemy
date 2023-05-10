@@ -17,6 +17,10 @@ Specific comments:
 
 Change:
 The relevant preprint references have been updated to the correct 'cite as:' information as displayed on arXiv.
+
+We have also included two new references:
+"Glitches are caused by instrument behaviour or interactions between the instrument and the environment [17, 18]" - [18] is a reference to "Noise in the LIGO Livingston Gravitational Wave Observatory due to Trains"
+"The ranking statistic [43] represents the legitimacy of signal being astrophysical in origin" - [43] is a reference to "Extending the PyCBC search for gravitational waves from compact binary mergers to a global network"
 -----
 
 #####
@@ -164,7 +168,7 @@ The change is as follows:
 
 Change:
 We explicitly define a match of 1.0 being found between identical ~normalized~ waveforms.
-The sentence now reads: "The value for the match, $M$,  is bounded between 0 and 1, where a value of 0 indicates orthogonal waveforms and a value of 1 for indicates identical normalized waveforms."
+The sentence now reads: "The value for the match, $M$,  is bounded between 0 and 1, where a value of 0 indicates orthogonal waveforms and a value of 1 indicates identical normalized waveforms."
 -----
 
 #####
@@ -201,10 +205,10 @@ We agree with the reviewer that the chi^2 statistic we have formed is explicitly
 however!!  as I said, that number is incorrect because it's using only the net change as the count.  you need to look to see what total number of injections changed their state, and re-do the analysis above using that number.  the 38% I obtained above is a lower bound on the uncertainty, so "3 sigma" is an upper bound on the confidence.  the correct answer is worse than this.
 
 Change:
-We thank the reviewer for the effort they have made to highlight the statistical significance of our result and have provided the analysis they wish to see. The paper now contains the information concerning the number of injections that have changed state, either newly missed or newly found, these are displayed clearly in table 3, page 27, section 4.1. With this information we have repeated the analysis made by the reviewer in their comment, the calculation has been included in Appendix B and the results of which - that the results we have found aren't statistically significant - have been included in section 4.1 alongside our opinion that the sensitivity gain isn't good enough to justify the use of time and resources on improving the significance of the results.
+We thank the reviewer for the effort they have made to highlight the statistical significance of our result and have provided the analysis they wish to see. The paper now contains the information concerning the number of injections that have changed state, either newly missed or newly found, these are displayed clearly in table 3, page 27, section 4.1. With this information we have repeated the analysis made by the reviewer in their comment, the calculation has been included in Appendix A and the results of which - that the results we have found aren't statistically significant - have been included in section 4.1 alongside our opinion that the sensitivity gain isn't good enough to justify the use of time and resources on improving the significance of the results.
 
 The sentence added into section 5:
-"The sensitivity increase we report for the binary black hole injection set is not statistically significant at a 95\% confidence interval, the analysis is included in~\ref{sec:apdx_stat_sig}. Repeating the scattered-light glitch search and glitch subtracted gravitational wave search on a larger injection set would increase our confidence in our results, however, the marginal sensitivity increase would not justify this."
+"The sensitivity increase we report for the binary black hole injection set is not statistically significant at a 95\% confidence interval, the analysis is included in Appendix A. Repeating the scattered-light glitch search and glitch-subtracted gravitational wave search on a larger injection set would increase our confidence in our results, however, the marginal sensitivity increase would not justify this."
 
 The statistical significance appendix calculation:
 "We report a marginal sensitivity increase for the binary black hole injection set in section~\ref{sec:results}, and in this appendix we compute the statistical significance of this finding.
@@ -259,16 +263,18 @@ Note: We have combined these two comments.
 5. Similarly, what is the primary reason that the glitch-subtracted search identified 10 additional binary signals? Two of these are displayed in Fig. 12, which helps. How many more of these signals were overlapping with such glitches? Also, did the glitch-subtraction aid their detection because the traditional chi-square values on those binary signals improved after the glitch subtraction?
 
 Change:
-We agree that this is useful information to provide. 
+We agree that this is useful information to provide. We have included the information on the overlap of newly-found and newly-missed injections with subtracted scattered-light glitches:
 
-
+--
 We have included the requested extra information within section 4.1, and the final paragraph on page 27. The text now reads:
-"We compare the number of injections found by both searches but also look at the gravitational wave injections found by the original search and missed by the glitch-subtracted search and vice versa, this information can be seen in table~\ref{tab:found_missed_injs}. Considering signals found by the original search and missed by the glitch-subtracted search there are $3$ binary black hole injections with false-alarm rates in the original search ranging from $0.5 - 0.3$ per year, one of which had a glitch removed approximately $9$ seconds after the injection, there are $5$ newly-missed binary neutron star injections with false-alarm rates ranging from $0.5 - 0.056$ per year, two of the five binary neutron star injections had glitches removed within $60$ seconds of the injection, and there are $3$ newly-missed neutron star black hole injections with false-alarm rates ranging from $0.5 - 0.086$, one had glitches removed within $60$ seconds of the injection. The other newly-missed injections showed no scattered-light glitches within a $20$ second window for binary black hole injections and a $60$ second window for binary neutron star and neutron star black hole injections."
+"We compare the number of injections found by both searches but also look at the \gw{} injections found by the original search and missed by the glitch-subtracted search and vice versa, this information can be seen in table~\ref{tab:found_missed_injs}. Considering signals found by the original search and missed by the glitch-subtracted search there are $3$ binary black hole injections with false-alarm rates in the original search ranging from $0.5 - 0.3$ per year, one of which had a glitch removed approximately $9$ seconds after the injection, there are $5$ newly-missed binary neutron star injections with false-alarm rates ranging from $0.5 - 0.056$ per year, two of the five binary neutron star injections had glitches removed within $60$ seconds of the injection, and there are $3$ newly-missed neutron star black hole injections with false-alarm rates ranging from $0.5 - 0.086$, one had glitches removed within $60$ seconds of the injection. The other newly-missed injections showed no \scl{} glitches within a $20$ second window for binary black hole injections and a $60$ second window for binary neutron star and neutron star black hole injections."
 
+--
 We look for nearby glitches removed from newly-found injections, and include the information in section 4.1 and pages 27 & 28. The paragraph now reads:
-"The glitch-subtracted search identifies $10$ additional binary black hole injections, the most significant of which have false-alarm rates of 1 per $190.50$, 1 per $7633.84$ and 1 per $8643.73$ years. We illustrate the last of these in figure~\ref{fig:ae_found} (top). $5$ extra binary neutron star injections were found, with false-alarm rates from $0.5 - 0.19$ per year and $8$ neutron star black hole injections were found, where the false-alarm rate of the most significant is 1 per $9961.55$ years. This injection can also be seen in figure~\ref{fig:ae_found} (bottom). We find $6$ of the $10$ binary black hole injections have scattered-light glitches within a $20$ second window of the injection, $3$ of $5$ binary neutron star injections have scattered-light glitches within a $60$ second window of the injection and, $6$ of the $8$ neutron star black hole injections had scattered-light glitches within a $60$ second window of the injection. The false alarm rates of the newly found and newly missed injections can be seen in~\ref{sec:apdx_FAR_table}."
+"The glitch-subtracted search identifies $10$ additional binary black hole injections, the most significant of which have false-alarm rates of 1 per $190.50$, 1 per $7633.84$ and 1 per $8643.73$ years. We illustrate the last of these in figure~\ref{fig:ae_found} (top). $5$ extra binary neutron star injections were found, with false-alarm rates from $0.5 - 0.19$ per year and $8$ neutron star black hole injections were found, where the false-alarm rate of the most significant is 1 per $9961.55$ years. This injection can also be seen in figure~\ref{fig:ae_found} (bottom). We find $6$ of the $10$ binary black hole injections have \scl{} glitches within a $20$ second window of the injection, $3$ of $5$ binary neutron star injections have \scl{} glitches within a $60$ second window of the injection and, $6$ of the $8$ neutron star black hole injections have \scl{} glitches within a $60$ second window of the injection. The false-alarm rates of the newly-found and newly-missed injections can be seen in~\ref{sec:apdx_injections_table}."
 
-We have also included a new appendix containing three tables of the trigger information of the injections that were both newly-found and newly-missed along with our explanation as to why these injections were found or missed in the glitch-subtracted search. This new paragraph appears in section 4.1 and page 28:
+--
+We have included a new appendix containing three tables with the trigger information of the injections that were both newly-found and newly-missed along with our explanation as to why these injections were found or missed in the glitch-subtracted search. This new paragraph appears in section 4.1 and page 28:
 
 "There have been 34 newly-found or newly-missed \gw{} injections when subtracting \scl{} glitches, it is informative to understand how the \gw{} search is influenced by the glitch subtraction to cause this outcome. The ranking statistic~\cite{Davies:2020tsx} represents the legitimacy of signal being astrophysical in origin and is partially computed using the re-weighted signal-to-noise ratio, which is itself computed using the initial signal-to-noise ratio alongside the various \gw{} discriminators and the PSD variation measurement~\cite{Mozzon_2020}. We use the trigger information saved by the \gw{} search to identify why injections that weren't found previously have been found post-glitch subtraction, and vice versa. 
 
