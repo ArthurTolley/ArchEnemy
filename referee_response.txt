@@ -57,22 +57,22 @@ without supporting documentation, the authors of this manuscript must reword thi
 Change:
 We have avoided referring to glitches as non-Gaussianities:
 
-Introduction:
+Introduction (Page 2):
 "the data contains both non-stationary noise and non-Gaussian transient noise `glitches'."
 to:
 "the data contains both non-stationary noise and short duration `glitches' where noise power increases rapidly."
 
-Section 3.4:
-"This test is constructed so as to produce large values when the data contains a non-Gaussianity that is not well described by the template, but to follow a $\chi^2$ distribution if a non-Gaussianity that matches well to the template is present, or if no non-Gaussianity is present in the data."
+Section 3.4 (Page 14):
+"This test is constructed so as to produce large values when the data contains a non-Gaussianity that is not well described by the template, but to follow a chi^2 distribution if a non-Gaussianity that matches well to the template is present, or if no non-Gaussianity is present in the data."
 to:
-"This test is constructed so as to produce large values when the data contains a glitch, or astrophysical signal, that is not well described by the template, but to follow a $\chi^2$ distribution if a glitch that matches well to the template is present, or if the data is Gaussian and stationary."
+"This test is constructed so as to produce large values when the data contains a glitch, or astrophysical signal, that is not well described by the template, but to follow a chi^2 distribution if a glitch that matches well to the template is present, or if the data is Gaussian and stationary."
 
-Section 3.4, next paragraph:
-"Any non-Gaussianity that does not exhibit symmetric morphology should not fit with this deconstruction of the template, and should result in elevated $\chi_{r}^{2}$ values."
+Section 3.4, next paragraph (Page 14/15):
+"Any non-Gaussianity that does not exhibit symmetric morphology should not fit with this deconstruction of the template, and should result in elevated chi_{r}^{2} values."
 to:
-"Any glitch, or astrophysical signal, which does not exhibit symmetric morphology should not fit with this deconstruction of the template, and should result in elevated $\chi_{r}^{2}$ values."
+"Any glitch, or astrophysical signal, which does not exhibit symmetric morphology should not fit with this deconstruction of the template, and should result in elevated chi_{r}^{2} values."
 
-Section 5:
+Section 5 (Page 31, final sentence):
 "such techniques offer a method for mitigating the effect that these non-Gaussianities will have on the search, maximizing the number of observations that can be made."
 to:
 "such techniques offer a method for mitigating the effect that these glitches will have on the search, maximizing the number of observations that can be made."
@@ -85,6 +85,7 @@ to:
 5. Introduction, page 2 line 42, and page 3 line 43.  the authors have repeatedly used (what I feel to be) the awkward phrase "surfaces in which scattered-light glitches originate from".  I'm pretty sure this is wrong, I think you can't both "in" and "from" something with only a single verb.  you have to pick one, like, "surfaces from which scattered-light glitches originate".
 
 Change:
+(Introduction, Page 2)
 We have revised the phrase to "surfaces from which scattered-light glitches originate," as suggested.
 -----
 
@@ -98,14 +99,15 @@ We have revised the phrase to "surfaces from which scattered-light glitches orig
 with phi_sc defined as in (2), then it would be true that A_tot = A_0 + A_sc, as written.  please either correct the statements or change the mathematical definitions of the quantities so the statements are correct.
 
 Change:
+(Section 2.1, Page 7)
 We thank the reviewer for noticing this inconsistency and providing a solution which we have now implemented into the paper, changing equation (1) to include the exponential term. We edit the following two sentences to define phi_sc and smoothly follow into equation (2): 
-"where $A_{0}$ is the amplitude of the light resonating in a Fabry–Pérot cavity and $f_{sc}$ is the fraction of the optical power scattered back into the main beam.
+"where A_{0} is the amplitude of the light resonating in a Fabry–Pérot cavity and f_{sc} is the fraction of the optical power scattered back into the main beam.
 
 The phase angle modulated by the displacement of the scattering optics is also defined as (2)"
 
 to
 
-"where $A_{0}$ is the amplitude of the light resonating in a Fabry–Pérot cavity, $f_{sc}$ is the fraction of the optical power scattered back into the main beam and $\phi_{sc}$ is the phase angle modulated by the displacement of the scattering optics, defined as (2)"
+"where A_0 is the amplitude of the light resonating in a Fabry–Pérot cavity, f_sc is the fraction of the optical power scattered back into the main beam and phi_sc is the phase angle modulated by the displacement of the scattering optics, defined as (2)"
 
 -----
 
@@ -115,7 +117,8 @@ to
 7. Section 2, page 7, line 26, the logic is backwards here.  the claim is the strain is proportional to the scattered light phase, and therefore we write equation (3).  but equation (3) is not a proportionality relationship.  for small changes in phase, sin(phi0 + delta phi) \approx cos(phi0)*sin(delta phi) which *is* a proportionality relationship between strain and phase, but you get to that conclusion from equation (3), not the other way around.  Please reword.
 
 Change:
-We have reworded the statement regarding the proportionality relationship between the strain and scattered-light phase. The text previously read "The measured gravitational wave strain is proportional to the phase noise and so the noise introduced by scattered-light, h_{sc}, can be expressed as" and now reads "The noise introduced by the scattered-light, h_{sc}, can be approximated through the relationship sin(phi0 + delta phi) \approx cos(phi0) \times sin(delta phi) for small delta phi, and can be expressed as".
+(Section 2.1, Page 7)
+We have reworded the statement regarding the proportionality relationship between the strain and scattered-light phase. The text previously read "The measured gravitational wave strain is proportional to the phase noise and so the noise introduced by scattered-light, h_sc, can be expressed as" and now reads "The noise introduced by the scattered-light, h_sc, can be approximated through the relationship sin(phi_0 + delta phi) \approx cos(phi_0) \times sin(delta phi) for small delta phi, and can be expressed as".
 -----
 
 #####
@@ -132,6 +135,7 @@ P(data | signal) = \int_{waveform family} P(data | specific waveform) d waveform
 i.e., you need to marginalize the numerator of the likelihood ratio over choice of waveform.  the assumption that the matched filter SNR maximized over a template bank is still probably good enough is equivalent to assuming that P(data | specific waveform) is a strongly peaked function at the correct waveform, and so the marginalization integral can be approximated up to an unknown (and irrelevant) normalization factor by the value of the integrand at its peak.  it's not optimal, it's an approximation of what would be, and it's probably not even a good approximation for low amplitude signals, but it leads to an algorithm that has a low computational cost, and that ends up winning the argument.
 
 Change:
+(Section 3.1, Page 10)
 We agree with the reviewer that the initial statement that the matched filter isn't the optimal method for detecting waveforms and therefore we have been more explicit in why matched filtering was chosen for this research project, following precedent set by the gravitational wave searched historically and the good approximation that matched filtering is to the likelihood ratio calculation. Therefore, we have replaced the statement:
 
 "The matched filter is the optimal method for detecting known waveforms in the data, when the data is stationary and Gaussian, and is defined as~\cite{findchirp}."
@@ -148,6 +152,7 @@ with the following paragraph:
 10. Section 3.2, page 12, line 8, what is "search" referring to here?  this paragraph is describing the construction of a template bank via a stochastic algorithm that searches for and fills holes in a template bank.  *that* search is not linear in the number of templates.  that algorithm is probably cubic or worse in the final number of templates.  if what is meant is the search for glitches using the template bank is linear in the size of the bank, then please reword this to make that more clear.
 
 Change:
+(Section 3.2, Page 12)
 To ensure the statement is more clear we have included explicit reference to searching for scattered-light glitches with matched filtering and at the end of the same paragraph we have included more information on how costly the template bank generation is in the entire search process.  The statement previously read:
 
 "The dominant cost of the search is matched filtering and is approximately linear to the number of templates"
@@ -163,8 +168,9 @@ The change is as follows:
 11. section 3.2, page 12, line 24.  a match of 1.0 indicates *parallel* waveforms, not identical waveforms.  equation (22) defines match in terms of normalized versions of the waveforms, so the match does not imply anything about the magnitude of either of the waveforms (a and b can be scalled up or down without changing the match between them).
 
 Change:
+(Section 3.2, Page 12)
 We explicitly define a match of 1.0 being found between identical ~normalized~ waveforms.
-The sentence now reads: "The value for the match, $M$,  is bounded between 0 and 1, where a value of 0 indicates orthogonal waveforms and a value of 1 indicates identical normalized waveforms."
+The sentence now reads: "The value for the match, M,  is bounded between 0 and 1, where a value of 0 indicates orthogonal waveforms and a value of 1 indicates identical normalized waveforms."
 -----
 
 #####
@@ -173,6 +179,7 @@ The sentence now reads: "The value for the match, $M$,  is bounded between 0 and
 12. Figure 4.  if I zoom in enough, I can see that it's a scatter plot of black dots on a white background, but viewing from normal page reading distance I can't tell if it's that or white dots on a black background.  please explain which it is in the caption.
 
 Change:
+(Page 13)
 In an effort to make Figure 4 clearer for readers we have edited the caption to include "(black points)" when describing the templates to indicate that templates are represented by black points on a white background.
 
 The figure caption now reads: "The template bank of scattered-light glitch templates (black points) used in the search for scattered-light glitches. The glitch frequency parameter values range from 20Hz - 80Hz and the time period parameter values range from 1.8s - 5.5s. This bank was created with a maximum match allowed between two templates of 0.97 and contains 117,481 templates."
@@ -188,6 +195,7 @@ The figure caption now reads: "The template bank of scattered-light glitch templ
 but leaving all the rest of the text unchanged is fine.  it's clearly some kind of \chi^2 statistic, that's not false, so calling it that isn't wrong.  what I mean is one only needs to change the symbol when used in mathematics, as the quantity from equation (23), one doesn't need to change the symbol in the text when talking about a \chi^2 statistic.
 
 Change:
+(Section 3.4, Page 14)
 We have included the suggested additional equation within equation (23) to emphasize the chi^2 value we are calculating (now denoted chi_r^2 in the equation) is normalized by the number of degrees of freedom. We have also updated occurrences of chi^{2} to the chi_{r}^{2} variable where the text is explicitly calling for that calculated quantity.
 "\chi_{r}^{2} = \frac{\chi^{2}}{\textrm{DOF}} = \frac{n}{2n - 2} \sum_{i=1}^n \left(\frac{\rho}{\sqrt{n}} - \rho_{bin,i}\right)^2."
 
@@ -202,23 +210,23 @@ however!!  as I said, that number is incorrect because it's using only the net c
 
 Change:
 We thank the reviewer for the effort they have made to highlight the statistical significance of our result and have provided the analysis they wish to see. The paper now contains the information concerning the number of injections that have changed state, either newly missed or newly found, these are displayed clearly in table 2, page 27, section 4.1 alongside an update caption:
-"The number of injections found by each search with a false-alarm rate less than 2 per year alongside the number of newly-found and newly-missed injections, those by the glitch-subtracted and not the original search and vice versa. We also show the sensitivity ratio of the glitch-subtracted search and original search for each injection set."
+"The number of injections found by each search with a false-alarm rate less than 2 per year alongside the number of newly-found and newly-missed injections, those found by the glitch-subtracted and not the original search and vice versa. We also show the sensitivity ratio of the glitch-subtracted search and original search for each injection set."
 
 With this information we have repeated the analysis made by the reviewer in their comment, the calculation has been included in Appendix A and the results of which - that the results we have found aren't statistically significant - have been included in section 4.1 alongside our opinion that the sensitivity gain isn't good enough to justify the use of time and resources on reducing the error in the computed sensitivity ratio.
 
-The paragraph added into section 5:
-"The statistical significance of the sensitivity increase we report for the binary black hole injection set can be found by investigating the null hypothesis of seeing the same $1\%$ increase under the assumption that the subtraction of \scl{} glitches does not actually increase sensitivity. When performing this analysis we find that our result is not statistically significant at the 95\% confidence interval --i.e. there is a 5.24\% chance that we might measure such a moderate increase in sensitivity under the null hypothesis-- (see\ref{sec:apdx_stat_sig} for details). However, the marginal sensitivity increase would not justify repeating the \scl{} glitch search and glitch-subtracted \gw{} search on a larger injection set, instead more work is needed to better identify and remove \scl{} glitches while remaining safe in the presence of \gw{} signals."
+The paragraph added into section 5 (page 29):
+"The statistical significance of the sensitivity increase we report for the binary black hole injection set can be found by investigating the null hypothesis of seeing the same 1% increase under the assumption that the subtraction of scattered-light glitches does not actually increase sensitivity. When performing this analysis we find that our result is not statistically significant at the 95% confidence interval --i.e. there is a 5.24% chance that we might measure such a moderate increase in sensitivity under the null hypothesis-- (see Appendix A for details). However, the marginal sensitivity increase would not justify repeating the scattered-light glitch search and glitch-subtracted gravitational wave search on a larger injection set, instead more work is needed to better identify and remove scattered-light glitches while remaining safe in the presence of gravitational wave signals."
 
-The statistical significance appendix calculation:
-"We report a $1\%$ increase in the sensitivity for the binary black hole injection set in the glitch-subtracted \gw{} search (see section~\ref{sec:results}). We wish to determine the statistical significance of this results under the null hypothesis that subtracting \scl{} glitches prior to searching for \gws{} does not increase the sensitivity of the \gw{} search. The binary black hole injection set contains $6200$ injected signals, $10$ additional injections were found in the glitch-subtracted \gw{} search, $3$ additional injections were missed in our search, this gives us $13$ injections which have changed state.
+The statistical significance appendix calculation (pages 34 & 35):
+"We report a 1% increase in the sensitivity for the binary black hole injection set in the glitch-subtracted gravitational wave search (see section~\ref{sec:results}). We wish to determine the statistical significance of this result under the null hypothesis that subtracting scattered-light glitches prior to searching for gravitational waves does not increase the sensitivity of the gravitational wave search. The binary black hole injection set contains 6200 injected signals, 10 additional injections were found in the glitch-subtracted gravitational wave search, 3 additional injections were missed in our search, this gives us 13 injections which have changed state.
 
 First, we calculate the probability that an injection has been affected by the glitch removal, 
-    p = \frac{13}{6200} = 0.21\% ,
+    p = \frac{13}{6200} = 0.21% ,
 then we calculate the standard deviation, 
     \textrm{std} = \sqrt{n * p * (1 - p)} = 3.60 .
 Using the standard deviation we calculate the number of standard deviations our result deviates from the mean. We divide the number of positively changed (newly-found) injections by the standard deviation, 
     \textrm{standard deviations} = \frac{(10 - 3)}{3.60} = 1.94 .
-Under the assumption of no sensitivity increase caused by the subtraction of glitches, we measure our result of +7 newly-found \gw{} injections to lie $1.94$ standard deviations from an expected value of $0$ newly-found injections. The critical value of a 95\% confidence interval, that is to say we are 95\% confidence that our null hypothesis is true, is $1.96$ meaning our result is within the 95\% confidence interval. We can describe this as there being a greater than 5\% chance that our result is not caused by the subtraction of glitches but is instead caused by random chance. To reduce the error in the computed sensitivity ratio a larger injection set test would be required, this would need a large time and computational power investment which we do not believe is justified in the case of such a minor increase in the sensitivity."
+Under the assumption of no sensitivity increase caused by the subtraction of glitches, we measure our result of +7 newly-found gravitational wave injections to lie 1.94 standard deviations from an expected value of 0 newly-found injections. The critical value of a 95% confidence interval, that is to say there is a 1 in 20 chance of our null hypothesis being true, is 1.96 meaning our result is within the 95% confidence interval. We can describe this as there being a 5.24% chance that our result is not caused by the subtraction of glitches but is instead caused by random chance. To reduce the error in the computed sensitivity ratio a larger injection set test would be required, this would need a large time and computational power investment which we do not believe is justified in the case of such a minor increase in the sensitivity."
 -----
 
 -----------
@@ -234,7 +242,7 @@ I recommend the work for publication provided the concerns below are addressed s
 Note: In the current version these are equations (23) & (24)
 1. There is potential for ambiguity in the use of $\rho$ in equations (22) and (23). Is it true that the \rho in both equations is computed using the scattered-light template? If so, it would help to emphasize this aspect below (23), especially, because you cite a binary paper to motivate the construction of the reweighted SNR.
 
-Change:
+Change (Section 3.4, Page 15):
 We agree that there is a potential for confusion, so the statement "where rho_{rw} represents the reweighted signal-to-noise ratio of the scattered-light glitch template calculated using the signal-to-noise ratio, rho, and the chi^2 value of that template." has been included after equation (24) to explicitly define the variables.
 -----
 
@@ -243,10 +251,10 @@ We agree that there is a potential for confusion, so the statement "where rho_{r
 -----
 2. In Sec. 3.5, how was the choice of 0.9s for the clustering window made? Ditto for the glitch frequency window size of 4Hz.
 
-Change:
+Change (Section 3.5, Pages 16 & 19):
 We have updated both statements to include more information on how they were chosen.
 "using a window of 0.9 seconds" -> "using a window of half of the shortest duration template - 0.9 seconds"
-"using a window size of $4$Hz" -> "using a window size of $4$Hz, a lower limit on the frequency separation of harmonic glitches,"
+"using a window size of 4Hz" -> "using a window size of 4Hz, a lower limit on the frequency separation of harmonic glitches,"
 -----
 
 #####
@@ -271,23 +279,23 @@ Change:
 We agree that this is useful information to provide. We have included the information on the overlap of newly-found and newly-missed injections with subtracted scattered-light glitches:
 
 --
-We have included the requested extra information within section 4.1, and the final paragraph on page 27. The text now reads:
-"We compare the number of injections found by both searches but also look at the gravitational wave injections found by the original search and missed by the glitch-subtracted search and vice versa, this information can be seen in table~\ref{tab:found_missed_injs}. Considering signals found by the original search and missed by the glitch-subtracted search there are $3$ binary black hole injections with false-alarm rates in the original search ranging from $0.5 - 0.3$ per year, one of which had a glitch removed approximately $9$ seconds after the injection, there are $5$ newly-missed binary neutron star injections with false-alarm rates ranging from $0.5 - 0.056$ per year, two of the five binary neutron star injections had glitches removed within $60$ seconds of the injection, and there are $3$ newly-missed neutron star black hole injections with false-alarm rates ranging from $0.5 - 0.086$, one had glitches removed within $60$ seconds of the injection. The other newly-missed injections showed no scattered-light glitches within a $20$ second window for binary black hole injections and a $60$ second window for binary neutron star and neutron star black hole injections."
+We have included the requested extra information within section 4.1 (pages 26 & 27). The text now reads:
+"We compare the number of injections found by both searches but also look at the gravitational wave injections found by the original search and missed by the glitch-subtracted search and vice versa, this information can be seen in table 2. Considering signals found by the original search and missed by the glitch-subtracted search there are 3 binary black hole injections with false-alarm rates in the original search ranging from 0.5 - 0.3 per year, one of which had a glitch removed approximately 9 seconds after the injection, there are 5 newly-missed binary neutron star injections with false-alarm rates ranging from 0.5 - 0.056 per year, two of the five binary neutron star injections had glitches removed within 60 seconds of the injection, and there are 3 newly-missed neutron star black hole injections with false-alarm rates ranging from 0.5 - 0.086, one had glitches removed within 60 seconds of the injection. The other newly-missed injections showed no scattered-light glitches within a 20 second window for binary black hole injections and a 60 second window for binary neutron star and neutron star black hole injections."
 
 --
 We look for nearby glitches removed from newly-found injections, and include the information in section 4.1 and pages 27 & 28. The paragraph now reads:
-"The glitch-subtracted search identifies $10$ additional binary black hole injections, the most significant of which have false-alarm rates of 1 per $190.50$, 1 per $7633.84$ and 1 per $8643.73$ years. We illustrate the last of these in figure~\ref{fig:ae_found} (top). $5$ extra binary neutron star injections were found, with false-alarm rates from $0.5 - 0.19$ per year and $8$ neutron star black hole injections were found, where the false-alarm rate of the most significant is 1 per $9961.55$ years. This injection can also be seen in figure~\ref{fig:ae_found} (bottom). We find $6$ of the $10$ binary black hole injections have scattered-light glitches within a $20$ second window of the injection, $3$ of $5$ binary neutron star injections have scattered-light glitches within a $60$ second window of the injection and, $6$ of the $8$ neutron star black hole injections have scattered-light glitches within a $60$ second window of the injection. We provide more details about the newly-found and newly-missed injections in~\ref{sec:apdx_injections_table}"
+"The glitch-subtracted search identifies 10 additional binary black hole injections, the most significant of which have false-alarm rates of 1 per 190.50, 1 per 7633.84 and 1 per 8643.73 years. We illustrate the last of these in figure 12 (top). 5 extra binary neutron star injections were found, with false-alarm rates from 0.5 - 0.19 per year and 8 neutron star black hole injections were found, where the false-alarm rate of the most significant is 1 per 9961.55 years. This injection can also be seen in figure 12 (bottom). We find 6 of the 10 binary black hole injections have scattered-light glitches within a 20 second window of the injection, 3 of 5 binary neutron star injections have scattered-light glitches within a 60 second window of the injection and, 6 of the 8 neutron star black hole injections have scattered-light glitches within a 60 second window of the injection. We provide more details about the newly-found and newly-missed injections in Appendix B"
 
 --
 We have included a new appendix containing three tables with the trigger information of the injections that were both newly-found and newly-missed along with our explanation as to why these injections were found or missed in the glitch-subtracted search. We include a more in-depth analysis as to why these injections were missed/found within the appendix. The text in the appendix reads:
 
-"Here we have three tables which contains data on the newly-found and newly-missed injections for each injection set. The tables are separated into the values for the inverse false-alarm rate and ranking statistic found for each injection in both searches then the signal-to-noise ratio, $\chi^{2}$ and PSD variation values for each detector in both searches. The first table is the results of the binary black hole injection set, the second table is the binary neutron star injection set and the third is the neutron star black hole injection set. A horizontal dashed line separates newly-found and newly-missed injections, using a false-alarm rate threshold of 2 per year. There were 2 newly-found binary black hole injections which were not found at all by the original search and therefore they do not appear in the first table.
+"Here we have three tables which contain data on the newly-found and newly-missed injections for each injection set. The tables are separated into the values for the inverse false-alarm rate and ranking statistic found for each injection in both searches then the signal-to-noise ratio, chi^{2} and PSD variation values for each detector in both searches. The first table is the results of the binary black hole injection set, the second table is the binary neutron star injection set and the third is the neutron star black hole injection set. A horizontal dashed line separates newly-found and newly-missed injections, using a false-alarm rate threshold of 2 per year. There were 2 newly-found binary black hole injections which were not found at all by the original search and therefore they do not appear in the first table.
 
-There have been 34 newly-found or newly-missed gravitational wave injections when subtracting scattered-light glitches, it is informative to understand how the gravitational wave search is influenced by the glitch subtraction to cause this outcome. The ranking statistic~\cite{Davies:2020tsx} represents the legitimacy of signal being astrophysical in origin and is partially computed using the re-weighted signal-to-noise ratio, which is itself computed using the initial signal-to-noise ratio alongside the various gravitational wave discriminators and the PSD variation measurement~\cite{Mozzon_2020}. We use the trigger information saved by the gravitational wave search to identify why injections that weren't found previously have been found post-glitch subtraction, and vice versa. 
+There have been 34 newly-found or newly-missed gravitational wave injections when subtracting scattered-light glitches, it is informative to understand how the gravitational wave search is influenced by the glitch subtraction to cause this outcome. The ranking statistic~\cite{Davies:2020tsx} represents the legitimacy of a signal being astrophysical in origin and is partially computed using the re-weighted signal-to-noise ratio, which is itself computed using the initial signal-to-noise ratio alongside the various gravitational wave discriminators and the PSD variation measurement~\cite{Mozzon_2020}. We use the trigger information saved by the gravitational wave search to identify why injections that weren't found previously have been found post-glitch subtraction, and vice versa. 
 
-As an example, we take the smallest false-alarm rate (1 per $8643.73$ years), newly-found, binary black hole injection, and look at the ranking statistic, signal-to-noise ratio, $\chi^{2}$ and, PSD variation measurements in both detectors and both searches -- these values can be found in~\ref{sec:apdx_injections_table}. This injection was originally seen with a false-alarm rate of 100 per year, far above our threshold, a very large increase in the ranking statistic from 13.29 to 27.01 is certainly responsible for the decreased false-alarm rate. There were no changes in the values measured by the LIGO-Livingston detector between searches which is expected as no scattered-light glitches were found within $512$ seconds of the injection. The LIGO-Hanford detector sees a small increase in the signal-to-noise ratio measured, from 7.98 to 8.22, a small increase in the $\chi^{2}$ value, from 2.32 to 2.48, and a very significant decrease in the PSD variation measurement, from 3.47 to 1.50. Using equation 18 of~\cite{Mozzon_2020}, we can calculate a re-weighted signal-to-noise ratio of $4.60$ for the original search and $5.67$ for the glitch-subtracted search, a significant increase in the signal-to-noise ratio. 
+As an example, we take the smallest false-alarm rate (1 per 8643.73 years), newly-found, binary black hole injection, and look at the ranking statistic, signal-to-noise ratio, chi^2 and, PSD variation measurements in both detectors and both searches -- these values can be found in table B1. This injection was originally seen with a false-alarm rate of 100 per year, far above our threshold, a very large increase in the ranking statistic from 13.29 to 27.01 is certainly responsible for the decreased false-alarm rate. There were no changes in the values measured by the LIGO-Livingston detector between searches which is expected as no scattered-light glitches were found within 512 seconds of the injection. The LIGO-Hanford detector sees a small increase in the signal-to-noise ratio measured, from 7.98 to 8.22, a small increase in the chi^2 value, from 2.32 to 2.48, and a very significant decrease in the PSD variation measurement, from 3.47 to 1.50. Using equation 18 of~\cite{Mozzon_2020}, we can calculate a re-weighted signal-to-noise ratio of 4.60 for the original search and 5.67 for the glitch-subtracted search, a significant increase in the signal-to-noise ratio. 
 
-The decrease in the PSD variation is true for the three newly-found very low false-alarm rate injections, accompanied by the small changes in signal-to-noise ratio and increase in the $\chi^{2}$ measurement. For newly-found and newly-missed injections which lie close to the 2 per year false-alarm rate threshold there is no definitive reason as to why these injections changed state."
+The decrease in the PSD variation is true for the three newly-found very low false-alarm rate injections, accompanied by the small changes in signal-to-noise ratio and increase in the chi^{2} measurement. For newly-found and newly-missed injections which lie close to the 2 per year false-alarm rate threshold there is no definitive reason as to why these injections changed state."
 
 
 -----
