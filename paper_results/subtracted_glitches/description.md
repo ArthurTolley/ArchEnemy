@@ -18,4 +18,4 @@ Each file contains 8 columns:
 7. Glitch Time
 8. Chi Squared Value
 
-Warning: The NO_INJ sets have not been scaled by the dynamic range factor: https://github.com/gwastro/pycbc/blob/master/pycbc/__init__.py#L133 
+Warning: The NO_INJ.txt format results have not been scaled by the dynamic range factor: https://github.com/gwastro/pycbc/blob/master/pycbc/__init__.py#L133 
