@@ -3,10 +3,10 @@ These files are sorted into detector-injection set combinations.
 H1 - LIGO-Hanford
 L1 - LIGO-Livingston
 
-BBH - Binary Black Hole
-NSBH - Neutron Star Black Hole
-BNS - Binary Neutron Star
-NO_INJ - No Injections
+BBH - Binary Black Hole  
+NSBH - Neutron Star Black Hole  
+BNS - Binary Neutron Star  
+NO_INJ - No Injections  
 
 Each file contains 8 columns:
 1. Glitch Frequency
