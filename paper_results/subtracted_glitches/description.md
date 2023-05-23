@@ -1,6 +1,6 @@
 These files are sorted into detector-injection set combinations.
 
-H1 - LIGO-Hanford
+H1 - LIGO-Hanford  
 L1 - LIGO-Livingston
 
 BBH - Binary Black Hole  
